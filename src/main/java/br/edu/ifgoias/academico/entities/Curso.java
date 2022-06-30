@@ -22,7 +22,7 @@ public class Curso implements Serializable {
 	private Integer idcurso;
 	
 	@Column (name = "nomecurso", nullable= false )
-	private String nome;
+	private String nomecurso;
 	
 	@OneToMany (mappedBy = "curso")
 	@JsonIgnore
@@ -34,7 +34,7 @@ public class Curso implements Serializable {
 	
 	public Curso(Integer idcurso, String nome) {
 		this.idcurso = idcurso;
-		this.nome = nome;
+		this.nomecurso = nome;
 	}
 
 	public Integer getIdcurso() {
@@ -45,12 +45,12 @@ public class Curso implements Serializable {
 		this.idcurso = idcurso;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getNomecurso() {
+		return nomecurso;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomecurso(String nome) {
+		this.nomecurso = nome;
 	}
 
 	public List<Aluno> getAlunos() {
@@ -72,7 +72,7 @@ public class Curso implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Curso [idcurso=" + idcurso + ", nome=" + nome + "]";
+		return "Curso [idcurso=" + idcurso + ", nomecurso=" + nomecurso + "]";
 	}
 		
 }

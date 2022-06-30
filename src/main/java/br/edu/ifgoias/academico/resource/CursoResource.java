@@ -20,6 +20,7 @@ import br.edu.ifgoias.academico.entities.Curso;
 import br.edu.ifgoias.academico.services.CursoService;
 
 @RestController
+@CrossOrigin("http://localhost:4200")
 @RequestMapping (value = "/cursos")
 public class CursoResource {
 	
